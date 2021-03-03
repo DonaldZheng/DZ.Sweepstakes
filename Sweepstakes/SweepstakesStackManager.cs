@@ -8,5 +8,18 @@ namespace Sweepstakes
 {
     class SweepstakesStackManager
     {
+        //member variables
+
+        //ctor
+
+        // member methods 
+        public Sweepstakes InsertSweepstakes()
+        {
+            return null;
+        }
+        public Sweepstakes GetSweepstakes()
+        {
+            return null;
+        }
     }
 }
