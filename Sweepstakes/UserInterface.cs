@@ -11,23 +11,27 @@ namespace Sweepstakes
         public static string EnterFirstName()
         {
             Console.WriteLine("Enter your first name: ");
-            return Console.ReadLine();
+            string userInputFirstName = Console.ReadLine();
+            return userInputFirstName;
         }
         public static string EnterLastName()
         {
             Console.WriteLine("Enter your last name: ");
-            return Console.ReadLine();
+            string userInputLastName = Console.ReadLine();
+            return userInputLastName;
         }
         public static string EnterEmailAddress()
         {
             Console.WriteLine("Enter your email address:  ");
-            return Console.ReadLine();
+            string userInputEmail = Console.ReadLine();
+            return userInputEmail;
         }
-        public static int EnterRegistrationNumber()
+        public static int EnterRegistrationNumber() // int not string here 
         {
             
             Console.WriteLine("Enter your registration number :");
-            return null;
+            int userInputNumber = Convert.ToInt32(Console.ReadLine());
+            return userInputNumber;
         }
     }
 }

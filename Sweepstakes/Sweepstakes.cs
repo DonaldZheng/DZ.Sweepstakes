@@ -11,11 +11,14 @@ namespace Sweepstakes
     {
         //member variable 
         public string name;
+        public int winnerNumber;
+        public Dictionary<int, string> nameDictionary = new Dictionary<int, string>();
+        public Dictionary<int, string> emailAddressDictionary = new Dictionary<int, string>(); // do not need a reg number dictionary?
 
         //ctor
         public Sweepstakes(string name)
         {
-                
+            this.name = name;
         }
 
         //member method
