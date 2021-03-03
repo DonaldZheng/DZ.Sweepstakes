@@ -10,11 +10,21 @@ namespace Sweepstakes
     class Sweepstakes
     {
         //member variable 
-        public string name;
+        private string name;
         public int winnerNumber;
-        public Dictionary<int, string> nameDictionary = new Dictionary<int, string>();
-        public Dictionary<int, string> emailAddressDictionary = new Dictionary<int, string>(); // do not need a reg number dictionary?
+        public Dictionary<int, Contestant> contestantDictionary = new Dictionary<int, Contestant>();
 
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
         //ctor
         public Sweepstakes(string name)
         {
@@ -27,7 +37,7 @@ namespace Sweepstakes
             contestant.firstName = UserInterface.EnterFirstName();
             contestant.lastName = UserInterface.EnterLastName();
             contestant.emailAddress = UserInterface.EnterEmailAddress();
-            contestant.registrationNumber = UserInterface.EnterRegistrationNumber();
+            contestant.registrationNumber = UserInterface.GetRegistrationNumber();
         }
 
         public string PickWinner() // will return a string of the winner, look at RPSLS project 

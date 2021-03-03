@@ -28,7 +28,7 @@ namespace Sweepstakes
             string userInputEmail = Console.ReadLine();
             return userInputEmail;
         }
-        public static int EnterRegistrationNumber() // int not string here 
+        public static int GetRegistrationNumber() // int not string here 
         {
             assignedNumber += 1; // ++ assignedNumber registration number is randomly assigned 
             Console.WriteLine("Your registation number is:" + assignedNumber);

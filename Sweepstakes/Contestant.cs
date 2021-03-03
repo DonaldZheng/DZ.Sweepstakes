@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Contestant
+    class Contestant // UML shows we need a get and set 
     {
         public string firstName;
         public string lastName;
         public string emailAddress;
         public int registrationNumber;
 
+        
     }
 }
