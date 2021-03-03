@@ -33,6 +33,7 @@ namespace Sweepstakes
         public string PickWinner() // will return a string of the winner, look at RPSLS project 
         {
             Random random = new Random(); // randomly pick the winner 
+            winnerNumber = random.Next()
             return null;
         }
 
