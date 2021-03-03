@@ -33,7 +33,13 @@ namespace Sweepstakes
         public string PickWinner() // will return a string of the winner, look at RPSLS project 
         {
             Random random = new Random(); // randomly pick the winner 
-            winnerNumber = random.Next()
+            winnerNumber = random.Next();      // next returns a random int
+            foreach (Dictionary<int, string> contestant in nameDictionary)
+            {
+                if (contestant == winnerNumber) // contestant number is equal to the winner number
+                {
+                }
+            }
             return null;
         }
 

@@ -8,6 +8,8 @@ namespace Sweepstakes
 {
     public static class UserInterface
     {
+        // member variable 
+        static int assignedNumber = 0;
         public static string EnterFirstName()
         {
             Console.WriteLine("Enter your first name: ");
@@ -28,10 +30,10 @@ namespace Sweepstakes
         }
         public static int EnterRegistrationNumber() // int not string here 
         {
-            
-            Console.WriteLine("Enter your registration number :");
-            int userInputNumber = Convert.ToInt32(Console.ReadLine());
-            return userInputNumber;
+            assignedNumber += 1; // ++ assignedNumber registration number is randomly assigned 
+            Console.WriteLine("Your registation number is:" + assignedNumber);
+            //int userInputNumber = Convert.ToInt32(Console.ReadLine());
+            return assignedNumber;
         }
     }
 }
