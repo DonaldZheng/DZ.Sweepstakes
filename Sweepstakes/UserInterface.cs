@@ -23,10 +23,11 @@ namespace Sweepstakes
             Console.WriteLine("Enter your email address:  ");
             return Console.ReadLine();
         }
-        public static string EnterRegistrationNumber()
+        public static int EnterRegistrationNumber()
         {
+            
             Console.WriteLine("Enter your registration number :");
-            return Console.ReadLine();
+            return null;
         }
     }
 }
