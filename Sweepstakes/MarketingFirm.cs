@@ -12,20 +12,17 @@ namespace Sweepstakes
         private ISweepStakesManager _manager;
 
         //ctor
-        public MarketingFirm(ISweepStakesManager manager)
+        public MarketingFirm(ISweepStakesManager manager) //dependant on ISweepstakeManager //   //pizza example: deep dish/stuff crust 
         {
-            _manager = manager;
+            this._manager = manager;
         }
-
+     
         //member method 
 
-        public void CreateSweepstake()
+        public void CreateSweepstake() // create sweepstake object to add to manager 
         {
-
+            Sweepstakes sweepstakes = new Sweepstakes("tickets");
+            _manager.InsertSweepstake(sweepstakes);
         }
-
-
-        //switch case for ManagerChoice
-        // parameter is the string choice 
     }
 }

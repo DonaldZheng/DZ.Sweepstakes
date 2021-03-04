@@ -10,6 +10,8 @@ namespace Sweepstakes
     {
         // member variable 
         static int assignedNumber = 0;
+
+        //member variables
         public static string EnterFirstName()
         {
             Console.WriteLine("Enter your first name: ");
