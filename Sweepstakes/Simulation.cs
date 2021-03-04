@@ -15,11 +15,25 @@ namespace Sweepstakes
             firm.CreateSweepstake();
         }
 
-        public void ManagerChoice(string choice)
+        public static string ManagerChoice(string choice)//factory design video -Michael to reference this, switch case for ManagerChoice, parameter is the string choice 
         {
-            //switch case for ManagerChoice
-            //parameter is the string choice 
+            ISweepStakesManager _manager;
+
+            switch (choice)
+            {
+                case "Stack":
+                    _manager = new SweepstakesStackManager();
+                    break;
+                case "Queue":
+                    _manager = new SweepstakeQueueManager();
+                    break;
+
+                default:
+                    Console.WriteLine("Not a valid choice, choose either Stack or Queue");
+                    break;
+            }
+            return choice;
         }
-        //factory design video 
+
     }
 }
