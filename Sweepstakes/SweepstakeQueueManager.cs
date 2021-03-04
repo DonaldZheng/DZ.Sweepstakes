@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class SweepstakeQueueManager
+    class SweepstakeQueueManager : ISweepStakesManager //First In First Out // Enqueue and dequeue
     {
         //member variables
-
+        Queue<Sweepstakes> myStack = new Queue<Sweepstakes>();
         //ctor
 
         //member methods 
-        public Sweepstakes InsertSweepstakes()
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            return null;
+            myStack.Enqueue(sweepstakes);
         }
 
         public Sweepstakes GetSweepstakes()

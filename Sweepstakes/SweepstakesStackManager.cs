@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class SweepstakesStackManager
+    class SweepstakesStackManager: ISweepStakesManager // stack is Last in First Out //push and pop
     {
         //member variables
+        Stack<Sweepstakes> myStack = new Stack<Sweepstakes>();
 
         //ctor
 
         // member methods 
-        public Sweepstakes InsertSweepstakes()
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            return null;
+            myStack.Push(sweepstakes);
         }
         public Sweepstakes GetSweepstakes()
         {

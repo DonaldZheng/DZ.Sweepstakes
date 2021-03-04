@@ -24,5 +24,8 @@ namespace Sweepstakes
 
         }
 
+
+        //switch case for ManagerChoice
+        // parameter is the string choice 
     }
 }
