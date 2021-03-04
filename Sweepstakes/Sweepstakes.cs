@@ -30,7 +30,7 @@ namespace Sweepstakes
         public Sweepstakes(string name)
         {
             this.name = name;
-            random = new Random();
+            random = new Random(); // example in war game 
         }
 
         //member method
@@ -42,12 +42,12 @@ namespace Sweepstakes
             contestant.registrationNumber = UserInterface.GetRegistrationNumber();
         }
 
-        public Contestant PickWinner() // will return the object: of the winner, look at RPSLS project 
-        {
-            Random random = new Random(); // randomly pick the winner 
-            int index = random.Next();      // next returns a random int
-            
-            return null;
+        public Contestant PickWinner() // will return the object: of the winner, look at RPSLS project // // randomly pick the winner 
+        { 
+            int indexOfWinner = random.Next(contestantDictionary.Count); // next returns a random int
+            Contestant winningContestant = new Contestant();
+            winningContestant = contestantDictionary[indexOfWinner];
+            return winningContestant;
         }
 
         public void PrintContestantInfo(Contestant contestant)
