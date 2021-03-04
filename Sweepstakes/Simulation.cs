@@ -16,8 +16,8 @@ namespace Sweepstakes
         }
 
         public static string ManagerChoice(string choice)//factory design video -Michael to reference this, switch case for ManagerChoice, parameter is the string choice 
-        {
-            ISweepStakesManager _manager;
+        {                                                  
+            ISweepStakesManager _manager; // inherit sweepstake 
 
             switch (choice)
             {
