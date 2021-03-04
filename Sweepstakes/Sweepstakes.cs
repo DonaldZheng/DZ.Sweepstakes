@@ -11,8 +11,9 @@ namespace Sweepstakes
     {
         //member variable 
         private string name;
-        public int winnerNumber;
+        Random random; // example in the war game project
         public Dictionary<int, Contestant> contestantDictionary = new Dictionary<int, Contestant>();
+
 
         public string Name
         {
@@ -29,10 +30,11 @@ namespace Sweepstakes
         public Sweepstakes(string name)
         {
             this.name = name;
+            random = new Random();
         }
 
         //member method
-        public void RegisterContesant(Contestant contestant) // get all the contesant info 
+        public void RegisterContesant(Contestant contestant) // get all the contesant info // reference soda machine?
         {
             contestant.firstName = UserInterface.EnterFirstName();
             contestant.lastName = UserInterface.EnterLastName();
@@ -40,16 +42,11 @@ namespace Sweepstakes
             contestant.registrationNumber = UserInterface.GetRegistrationNumber();
         }
 
-        public string PickWinner() // will return a string of the winner, look at RPSLS project 
+        public Contestant PickWinner() // will return the object: of the winner, look at RPSLS project 
         {
             Random random = new Random(); // randomly pick the winner 
-            winnerNumber = random.Next();      // next returns a random int
-            foreach (Dictionary<int, string> contestant in nameDictionary)
-            {
-                if (contestant == winnerNumber) // contestant number is equal to the winner number
-                {
-                }
-            }
+            int index = random.Next();      // next returns a random int
+            
             return null;
         }
 
