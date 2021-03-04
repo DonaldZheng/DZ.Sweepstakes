@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Sweepstakes
 {
     class SweepstakesStackManager: ISweepStakesManager // stack is Last in First Out //push and pop
+        // ISweepStakesManager allows the SweepstakesStackManager to use Insert and Get Sweepstake in this class (same in the queue class)
     {
         //member variables
         private Stack<Sweepstakes> sweepstakeStack = new Stack<Sweepstakes>();

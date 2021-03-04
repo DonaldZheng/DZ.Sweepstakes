@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class SweepstakeQueueManager : ISweepStakesManager //First In First Out // Enqueue and dequeue
+    class SweepstakeQueueManager : ISweepStakesManager 
+        //First In First Out // Enqueue and dequeue
+        // ISweepStakesManager allows the SweepstakesStackManager to use Insert and Get Sweepstake in this class (same as in the stack class)
     {
         //member variables
         private Queue<Sweepstakes> sweepstakeQueue = new Queue<Sweepstakes>();
