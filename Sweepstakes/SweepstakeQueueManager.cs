@@ -9,18 +9,18 @@ namespace Sweepstakes
     class SweepstakeQueueManager : ISweepStakesManager //First In First Out // Enqueue and dequeue
     {
         //member variables
-        Queue<Sweepstakes> myStack = new Queue<Sweepstakes>();
+        private Queue<Sweepstakes> sweepstakeQueue = new Queue<Sweepstakes>();
         //ctor
 
         //member methods 
-        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        public void InsertSweepstake(Sweepstakes sweepstakes)
         {
-            myStack.Enqueue(sweepstakes);
+            sweepstakeQueue.Enqueue(sweepstakes);
         }
 
         public Sweepstakes GetSweepstakes()
         {
-            return null;
+            return sweepstakeQueue.Dequeue();
         }
     }
 }

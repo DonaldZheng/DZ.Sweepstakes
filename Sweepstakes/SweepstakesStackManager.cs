@@ -9,18 +9,18 @@ namespace Sweepstakes
     class SweepstakesStackManager: ISweepStakesManager // stack is Last in First Out //push and pop
     {
         //member variables
-        Stack<Sweepstakes> myStack = new Stack<Sweepstakes>();
+        private Stack<Sweepstakes> sweepstakeStack = new Stack<Sweepstakes>();
 
         //ctor
 
         // member methods 
-        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        public void InsertSweepstake(Sweepstakes sweepstakes)
         {
-            myStack.Push(sweepstakes);
+            sweepstakeStack.Push(sweepstakes);
         }
         public Sweepstakes GetSweepstakes()
         {
-            return null;
+            return sweepstakeStack.Pop();
         }
     }
 }
